@@ -1,0 +1,86 @@
+//js me jo object hota hai vahi mongodb me document hoti hai
+//js me jo arrary of object hota haivo mongodb me collection of document
+//js me jo arrary of key hota haivo mongodb me field or attributes hoti hai
+//js me jo arrary of value hota hai vo mongodb me value hoti hai
+//js me jo datastructure hoti hai vo mongodb database banegi
+//js me jo function hoti hai  vo mongodb me query hoti hai
+//file system me jo parent folder name hai wo mongodb terms me database
+//parent folder ke andar jo subfolders hongi vo mongodb ke terms me collection 
+//subfolders ke andar jo files hongi wo mongodb ke terms me documents.
+//file system  jo file name hota hai  wo mongodb ke terms me field name hota hai
+//file system jo data hota hai wo mongodb ke terms me value hota hai
+//file system me jo function hoti hai wo mongodb me query hoti hai
+//jab bhi database me ek nya database banta hai to wo kuch empty folder jaisa hota hai
+//empty parent folder mongodb me allow nhi hota hai .that means empty folder database is not allowed in mongodb
+//iska matlb kam se kam collection /subfolder /  array homna chaiye
+//subfolder empty ho sakta hai lakin parent folder empty nhi ho sakta hai 
+//matlb empty collection /empty array is allowed but empty database is not allowed
+//collection name /subfolder /array of object inka name singular nhi ho sakta hai 
+//yeh hamesha plurul form me hona chahiye ex. users, products, 
+
+ *mongodb=>mongodb is an open -source , document-oriented NoSQL database management system.
+  why-> designed for flexiblity ,scalability and performance in handling unstructured or
+   semi- structured data.
+
+=>made by 10gen company prensent name of mongodb company . and founded by eliot horowitz 
+and merriman in 2007. the first verson of mongodb was released in 2009.
+
+=>diffrence between SQL and mongodb
+
+SQL-> SQL database are relational database.
+   ->they use structured tables to store data in rows and columns.
+   ->suitable for applications with well defined schemes and fixed data structurd
+   ->e-commerce platform , HR management etc
+  -> exmaples. MySQL, PostgreSQL, Oracle
+
+mongodb(NoSQL)-> NoSQL database are non relational database 
+    -> they provide flexbility in datastorage , allowing varied datatypes and structures.
+    -> ideal for applications with dynamic orevoling data models.
+    ->CMS social media platforms gaming
+    ->exampes. mongodb, cassandra,redies
+
+JSON Vs BSON
+
+->in mongodb ,we are write for in json format only but behind the scene data is stored in bson 
+(binaery json) format  , a binary representation of json.
+-> by utulizing bson , mongodb can achieve higher read and write speeds ,
+reduced storage  requerments, and improved data manipulation capablities, making it well-suited
+for handling large and complex datasets while maintaining performance efficiency.
+
+create data base in  prompt => use databasename
+
+create collection => db.createCollection("Data")
+
+collection delete =>db.data.drop()
+
+databased delete =>db.dropDatabase()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

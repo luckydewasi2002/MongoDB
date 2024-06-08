@@ -1,0 +1,42 @@
+// 1.for all the filter queries we use to find method
+//2.find method pure document me use hota hai
+//3. iska matlab hai ki each and every document apne apne me seprate document hai un document me jo bhi chije 
+(keys:value pair) particular condotion ko match kar rhi hai un sabhi document ko filter karke
+lane ka kam find method karti hai
+
+
+chapter 2: aggregation pipeline
+group karenge documents ka fir unme kuch find karne vale hai 
+pipeline  ek ke baad dusra
+
+
+//neha red
+//ajay pink
+//abhisek red
+//rajesh pink
+//kailash red
+ 
+mongodb is having objectid with itself which makes all the document unique. it has no 
+such problem of primary key , secondary key, candidatekey.
+
+mongodb is scalable
+it stores data either of the two method one is verticle scable method and
+other one is horizental scableble method.
+
+
+system design mein ek part hoti hai scaling 
+
+sharding : horizontal vertical
+horizontal we divide the physical memory into multiple sub memories
+vertical we  try to increase the physical memory
+
+aggregation pipeline ke mostly used operators hai :-
+
+$match == Find , condition ko match karvane ke liye use hogi
+
+$group : jab hame document ki grouping karni hogi
+
+$projection : jab hame limited keys dikhani ho
+  
+$unwind : jab hame array ko todna 
+
