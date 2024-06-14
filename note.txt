@@ -55,6 +55,18 @@ collection delete =>db.data.drop()
 
 databased delete =>db.dropDatabase()
 
+cursors => cursor in mongodb used to efficiently retrieve result set from queries , providing
+           control over the data retrieval process.
+
+cursor method=>
+                count(), limit(), skip(),sort()
+
+logical operators =>
+                   $and, $or, $not, 
+
+element operators =>
+                    $exists , $type, $size 
+
 
 
 
