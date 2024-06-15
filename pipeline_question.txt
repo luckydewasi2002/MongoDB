@@ -1,0 +1,160 @@
+// aggregatepipeline question
+Find all female users from Jaipur who know Python.
+(ans)=>db.users.aggregate(
+    [
+  {
+    $match: {
+      gender:"Female",
+      city:"Jaipur",
+      skills:"Python"
+    }
+  }
+]
+);
+
+Find all male users in Delhi who are above age 26
+(ans)=>
+db.users.aggregate(
+[
+  {
+    $match: {
+     gender:"Male",
+      city:"New Delhi",
+      age:{$gt:26}
+    }
+  }
+]
+)
+
+Find all users who are from either New Delhi or Mumbai.
+(ans)=>
+db.users.aggregate(
+[
+  {
+    $match: {
+      city: { $in: ["New Delhi", "Mumbai"] }
+    }
+  }
+]
+)
+
+Find all users who have the same last name.
+(ans)=>
+db.users.aggregate
+(
+[
+ {
+   $group: {
+     _id: "$lastName",
+    countuser:{$sum:1}
+   }
+ }
+]
+)
+Find the count of users in each city.
+(ans)=>
+db.users.aggregate
+(
+[
+ {
+   $group: {
+     _id: "$city",
+    countuser:{$sum:1}
+   }
+ }
+]
+)
+How many users are from New Delhi?
+(ans)=>
+db.users.aggregate
+(
+[
+  {
+    $match: {
+      city: "New Delhi"
+    }
+    
+    
+  },
+  {
+      $count: 'TotalUsersFromNewDelhi'
+    }
+]
+)
+How many Female users are from Jaipur?
+(ans)=>
+db.users.aggregate
+(
+[
+  {
+    $match: {
+      gender:"Female",
+      city: "Jaipur"
+    }
+    
+    
+  },
+  {
+      $count: 'TotalFemaleUsersFromJaipur'
+    }
+]
+)
+
+How many Male users are there in Delhi who have skills Java?
+(ans)=>
+db.users.aggregate
+(
+[
+  {
+    $match: {
+     skills:"Java"
+      city: "New Delhi"
+    }
+    
+    
+  },
+  {
+      $count: 'TotalUsersNewDelhi'
+    }
+]
+)
+
+How many users are from Hyderabad having age greater than 24 and have skill Python,C++
+(ans)=>
+db.users.aggregate
+(
+[
+  {
+    $match: {
+     skills:{$all:["Python","C++"]},
+      city: "Hyderabad",
+      age:{$gt:24}
+    }
+    
+    
+  },
+  {
+      $count: 'TotalUsersHyderabad'
+    }
+]
+)
+How many female users are from Goa having age greater than 24 and have skill Python,C++
+(ans)=>
+db.users.aggregate
+(
+[
+  {
+    $match: {
+      gender:"Female",
+     skills:{$all:["Python","C++"]},
+      city: "Goa",
+      age:{$gt:24}
+    }
+    
+    
+  },
+  {
+      $count: 'TotalUsersGoa'
+    }
+]
+)

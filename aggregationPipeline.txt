@@ -40,3 +40,14 @@ $projection : jab hame limited keys dikhani ho
   
 $unwind : jab hame array ko todna 
 
+system design:
+1.monolithik architecture
+2.distributive architecture
+
+database software webapp website
+database: monolithic or distributive
+monolithic = find , vertical scaling
+distributive = aggregation pipeline, horizentalscaling
+
+//groups 
+can be done on the basic of any 
